@@ -1,0 +1,38 @@
+# YAML Basics
+
+name: &name Tyrannosaurs #this is a comment
+anothername: '#name'
+period: "Late Creteceous"
+age: !!float 160
+age2: 76
+likes_to_eat:
+    - meat
+    - blood
+    - "other dinosaurs"
+    - "not plants"
+dimensions:
+    width: 3m
+    height: 8m
+    length: 10m   
+    weight: "1 ton" 
+desc: >
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+  passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.""
+poem: |
+  <h1>sdsadsad</h1>
+  asdasdasd
+  asdasdsdasd
+person:
+    myname: "Taimoor" 
+    movies: ["Dark Knight", "Inception"]
+    friends:
+        - {name:"Adam", age: 22}
+    id: *name
+
+    base: &base
+        var1: value1
+
+    foo:
+      <<: *base   
